@@ -1,8 +1,4 @@
 <?php
-echo getcwd ();
-exit();
-echo 'TESTANDO';
-exit();
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -16,8 +12,8 @@ curl_setopt_array($curl, array(
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_SSL_VERIFYPEER => 0,
     CURLOPT_SSL_VERIFYHOST => 0,
-    CURLOPT_SSLCERT => "C:\Users\Nykolas\Desktop\Hackton Tecban\TPP205\TPP205\Banco_1\certs\client_certificate.crt",
-    CURLOPT_SSLKEY => "C:\Users\Nykolas\Desktop\Hackton Tecban\TPP205\TPP205\Banco_1\certs\client_private_key.key",
+    CURLOPT_SSLCERT => getcwd ()."\certs\client_certificate.crt",
+    CURLOPT_SSLKEY => getcwd ()."\certs\client_private_key.key",
     CURLOPT_HTTPHEADER => array(
         "Content-Type: application/json",
         "x-fapi-financial-id: c3c937c4-ab71-427f-9b59-4099b7c680ab",
