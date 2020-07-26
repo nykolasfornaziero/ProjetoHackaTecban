@@ -1,6 +1,10 @@
 <?php
 $curl = curl_init();
 
+
+echo dirname(__FILE__);
+exit();
+
 curl_setopt_array($curl, array(
     CURLOPT_URL => "https://rs1.tecban-sandbox.o3bank.co.uk/open-banking/v3.1/aisp/balances",
     CURLOPT_RETURNTRANSFER => true,
