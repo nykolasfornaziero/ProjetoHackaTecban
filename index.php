@@ -1,11 +1,6 @@
 <?php
 $curl = curl_init();
 
-
-echo dirname(__FILE__);
-echo file_exists ( dirname(__FILE__)."/certs/client_certificate.crt" );
-exit();
-
 curl_setopt_array($curl, array(
     CURLOPT_URL => "https://rs1.tecban-sandbox.o3bank.co.uk/open-banking/v3.1/aisp/balances",
     CURLOPT_RETURNTRANSFER => true,
