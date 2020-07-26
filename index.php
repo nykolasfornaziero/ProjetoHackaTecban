@@ -3,6 +3,7 @@ $curl = curl_init();
 
 
 echo dirname(__FILE__);
+echo file_exists ( dirname(__FILE__)."/certs/client_certificate.crt" );
 exit();
 
 curl_setopt_array($curl, array(
@@ -16,8 +17,8 @@ curl_setopt_array($curl, array(
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_SSL_VERIFYPEER => 0,
     CURLOPT_SSL_VERIFYHOST => 0,
-    CURLOPT_SSLCERT => getcwd ()."\certs\client_certificate.crt",
-    CURLOPT_SSLKEY => getcwd ()."\certs\client_private_key.key",
+    CURLOPT_SSLCERT => dirname(__FILE__)."/certs/client_certificate.crt",
+    CURLOPT_SSLKEY => dirname(__FILE__)."/certs/client_private_key.key",
     CURLOPT_HTTPHEADER => array(
         "Content-Type: application/json",
         "x-fapi-financial-id: c3c937c4-ab71-427f-9b59-4099b7c680ab",
