@@ -1,5 +1,6 @@
 <?php
-
+echo getcwd ();
+exit();
 echo 'TESTANDO';
 exit();
 $curl = curl_init();
